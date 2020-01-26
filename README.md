@@ -1,24 +1,15 @@
-# README
+## Watch Heroes
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A simple **Ruby On Rails Full Text Search** .
 
-Things you may want to cover:
+a working demo on **Heroku**
 
-* Ruby version
+To run it in your development enviroment
 
-* System dependencies
+1. Clone this repo
 
-* Configuration
+2. run `bundle install` to install all required gems
 
-* Database creation
+3. run `rails db:seed` to populate the database on mlab
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+4- run `rails s` then go to `localhost:3000` , you will find your app there
