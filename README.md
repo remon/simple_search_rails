@@ -1,4 +1,4 @@
-## Watch Heroes
+## Simple Search (Rails)
 
 A simple **Ruby On Rails Full Text Search** .
 
