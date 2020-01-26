@@ -2,7 +2,7 @@
 
 A simple **Ruby On Rails Full Text Search** .
 
-a working demo on **Heroku**
+a working demo on **Heroku** on this **[Link](https://vanhack-project-search.herokuapp.com/)**
 
 To run it in your development enviroment
 
