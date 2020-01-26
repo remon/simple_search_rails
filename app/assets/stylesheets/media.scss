@@ -1,0 +1,42 @@
+@media (max-width: 575.98px) {
+  .form_wrapper .price_search .col-sm-12 input#price {
+    margin-top: 10px;
+  }
+  .popup_container {
+    width: 60%;
+
+    top: 30%;
+    left: 20%;
+    padding: 10px;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .form_wrapper .price_search .col-sm-12 input#price {
+    margin-top: 10px;
+  }
+  .popup_container {
+    width: 50%;
+
+    top: 30%;
+    left: 25%;
+    padding: 10px;
+  }
+}
+// Medium devices (tablets, 768px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .product_main_div {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) {
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+} // Extra small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap

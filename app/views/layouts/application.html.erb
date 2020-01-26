@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Vproject</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link href="https://fonts.googleapis.com/css?family=Bangers|Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+    <header class="store_header">
+      <a href="/">
+        <h3>My Store</h3>
+      </a>
+    </header>
+    <div class="container-fluid main-container">
+      <div class="row">
+        <div class="col-md-3 col-sm-12"> <%=render "pages/search_form"%></div>
+        <div class="col-md-9 col-sm-12">
+          <%= yield %>
+        </div>
+      </div>
+      <!--end of row-->
+    </div>
+    <!--end of main-container-->
+    <div class="popup_overlay"></div>
+    <div class="popup_container">
+      <span class="close_popup">x</span>
+      <div class="popup_body">
+        <h3>Popup header</h3>
+        <p> text</p>
+        <div class="popup_price">
+        </div>
+        <div class="popup_tags">
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

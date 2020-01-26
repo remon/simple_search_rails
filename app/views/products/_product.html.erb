@@ -1,0 +1,25 @@
+<div class="col-6 col-lg-4  product_main_div">
+  <div class="product_wrapper">
+    <div class="img_wrapper">
+      <div class="product_price">
+        <%=product.price%>$
+      </div>
+      <%=image_tag("product_default.png")%>
+      <div class="product_title">
+        <h6 class="pr_title"><%=product.title%> </h6>
+      </div>
+    </div>
+    <div class="product_desc">
+      <p class="pr_desc">
+        <%=product.description%>
+      </p>
+    </div>
+    <div>
+      <ul class="tags_area">
+        <%product.cached_tags.each do|tag|%>
+          <li><%=tag.name%></li>
+        <%end%>
+      </ul>
+    </div>
+  </div>
+</div>

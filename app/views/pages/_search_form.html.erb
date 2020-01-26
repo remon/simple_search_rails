@@ -1,0 +1,34 @@
+<div class="form_wrapper">
+  <h3> Search</h3>
+  <%= form_with(url: "/", method: "get", local: true) do %>
+    <div class="field">
+      <%=label_tag :term , "Search for keyword"%>
+      <%=text_field_tag :term,params[:term]%>
+    </div>
+    <div class="field">
+      <%=label_tag :country , "Origin Country"%>
+      <%=select_tag :country , options_for_select(Product.pluck(:country).uniq , params[:country]),{ prompt: "All Countries" }%>
+    </div>
+    <div class="field">
+      <%=label_tag :price_lq_eq, "Price Range"%>
+      <div class="col price_search">
+        <div class="row">
+          <div class="col-sm-12 col-md-8">
+            <%=select_tag :price_lq_eq , options_for_select([["Equal", "eq"], ["Greater Than", "gt"], ["Less Than", "lt"]], params[:price_lq_eq] ),{ prompt: "All Prices" } %>
+          </div>
+          <div class="col-sm-12 col-md-4">
+            <%=text_field_tag :price,params[:price]%>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="field">
+      <%=label_tag :sort_by , "Sort By"%>
+      <%=select_tag :sort_by , options_for_select([["Relevance","relevance"],
+      ["Newest First","newest"],["Oldest First","oldest"],["Lowest Price" ,"lowest"] ,["Highest Price" ,"highest"]], params[:sort_by] )%>
+    </div>
+    <div class="field form_btn_wrapper">
+      <%= submit_tag "Search" ,class: "btn btn-warning"%>
+    </div>
+  <%end%>
+</div>

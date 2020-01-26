@@ -1,0 +1,19 @@
+<%if @total_products.empty?%>
+  <div class="row">
+    <div class="col no_products">
+      <div class=" alert alert-danger" role="alert">There are no products matching your search</div>
+    </div>
+  </div>
+<%else%>
+  <div class="row">
+    <div class="col products_header">
+      <h4> Products(<%=@total_products.count%>)</h4>
+    </div>
+  </div>
+  <div class="row">
+    <%=render @products%>
+  </div>
+  <div class="products_paginate">
+    <%= paginate @products%>
+  </div>
+<%end %>
