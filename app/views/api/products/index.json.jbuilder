@@ -2,7 +2,7 @@ json.products @products do |p|
   json.title p.title
   json.price p.price
   json.description p.description
-  json.tags p.tags.pluck(:name)
+  json.tags p.cached_tags.pluck(:name)
 end
 
 json.total_products @total_products.count

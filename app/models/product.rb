@@ -10,7 +10,7 @@ class Product < ApplicationRecord
 
   def cached_tags
     Rails.cache.fetch("#{id}_tags") {
-      tags
+      tags.to_a
     }
   end
 

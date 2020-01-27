@@ -8,6 +8,6 @@ class ProductTag < ApplicationRecord
   private
 
   def clear_cache
-    Rails.cache.delete("#{product.id}_tags")
+    Rails.cache.delete("#{product_id}_tags")
   end
 end
